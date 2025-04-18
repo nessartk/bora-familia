@@ -1,9 +1,15 @@
 package com.nessartk.bora_familia;
 
+import java.util.List;
+
 public class Usuario {
     private String nome;
     private PapelNaFamilia papelNaFamilia;
-    private String corPreferida;
+    private String email;
+    private String image;
+    Agenda agenda;
+
+
 
     public String getNome() {
         return nome;
@@ -21,11 +27,19 @@ public class Usuario {
         return papelNaFamilia;
     }
 
-    public String getCorPreferida() {
-        return corPreferida;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCorPreferida(String corPreferida) {
-        this.corPreferida = corPreferida;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
