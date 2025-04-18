@@ -10,4 +10,10 @@ public class BoraFamiliaApplication {
 		SpringApplication.run(BoraFamiliaApplication.class, args);
 	}
 
+	Evento evento = new Evento();
+	Usuario usuario = new Usuario();
+
+
+
+
 }
