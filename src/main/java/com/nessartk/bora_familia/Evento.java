@@ -10,7 +10,7 @@ public class Evento {
     private LocalDateTime dataHoraTermino;
     private String localizacao;
     private TipoEvento tipo;
-    private Usuario responsavel;
+    private Usuario usuarioResponsavel;
     private boolean notificar;
     private boolean concluido;
     private String cor;
@@ -72,11 +72,11 @@ public class Evento {
     }
 
     public Usuario getResponsavel() {
-        return responsavel;
+        return usuarioResponsavel;
     }
 
     public void setResponsavel(Usuario responsavel) {
-        this.responsavel = responsavel;
+        this.usuarioResponsavel = responsavel;
     }
 
     public boolean isNotificar() {
