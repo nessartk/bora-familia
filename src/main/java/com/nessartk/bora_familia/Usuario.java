@@ -1,10 +1,8 @@
 package com.nessartk.bora_familia;
 
-import java.util.List;
-
 public class Usuario {
     private String nome;
-    private PapelNaFamilia papelNaFamilia;
+    private MembroDaFamilia membroDaFamilia;
     private String email;
     private String image;
     Agenda agenda;
@@ -19,12 +17,12 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public PapelNaFamilia getPapelNaFamilia() {
-        return papelNaFamilia;
+    public MembroDaFamilia getMembroDaFamilia() {
+        return membroDaFamilia;
     }
 
-    public PapelNaFamilia setPapelNaFamilia(PapelNaFamilia papelNaFamilia) {
-        return papelNaFamilia;
+    public MembroDaFamilia setMembrolDaFamilia(MembroDaFamilia membroDaFamilia) {
+        return membroDaFamilia;
     }
 
     public String getEmail() {

@@ -1,6 +1,6 @@
 package com.nessartk.bora_familia;
 
-public enum PapelNaFamilia {
+public enum MembroDaFamilia {
     PAI,
     MAE,
     FILHO,
