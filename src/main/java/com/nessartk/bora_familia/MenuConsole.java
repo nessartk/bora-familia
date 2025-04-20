@@ -22,44 +22,51 @@ public class MenuConsole {
         do{
             exibirMenu();
             opcao= sc.nextInt();
+            sc.nextLine(); // limpar o buffer ou usar tudo nextLine+ conversoes
+
 
             switch (opcao){
-                case 1 -> cadastrarUsuario();
+                case 1 -> cadastrarUsuario(); // lambda substitui o braak;
                 case 2 -> cadastrarEvento();
                 case 3 -> listarUsuarios();
                 case 4 -> listarEventos();
-                case 5 -> System.out.println("Encerrando o programa");
+                case 5 -> System.out.println("Encerrando o programa...");
                 default -> System.out.println("Opção inválida");
             }
 
         } while(opcao !=5);
+        sc.close();
     }
     public void exibirMenu(){
-        System.out.println("\n===== Menu Bora Família =====");
-        System.out.println("Escolha uma opção: ");
-        System.out.println("1. Cadastrar Usuário");
-        System.out.println("2. Cadastrar Evento");
-        System.out.println("3. Listar Usuários");
-        System.out.println("4. Listar Eventos");
-        System.out.println("5. Sair");
+        System.out.println("##==--Menu Bora Família--==");
+        System.out.println("|-------------------------|");
+        System.out.println("|1. Cadastrar Usuário     |");
+        System.out.println("|2. Cadastrar Evento      |");
+        System.out.println("|3. Listar Usuários       |");
+        System.out.println("|4. Listar Eventos        |");
+        System.out.println("|5. Sair                  |");
+        System.out.println("|-------------------------|");
+        System.out.println("Digite uma opção: ");
 
     }
 
     private void cadastrarUsuario(){
-        System.out.println("Nome: ");
+        System.out.print("\nDigite o seu nome: ");
         String nome = sc.nextLine();
-      //  System.out.println("Membro da família");
-      //  String membro = sc.nextLine();
-        System.out.println("Email: ");
+
+       // System.out.println("Membro da família");
+       // String membro = sc.nextLine();
+        System.out.print("\nDigite o seu email: ");
         String email= sc.nextLine();
-        System.out.println("Perosnalize seu usuário");
-        String imagem= sc.nextLine();
+
+       // System.out.println("Personalize seu usuário");
+       // String imagem= sc.nextLine();
 
         Usuario usuario = new Usuario();
         usuario.setNome(nome);
-       // usuario.setMembrolDaFamilia(membro); // enum
+       // usuario.setMembrolDaFamilia(); // enum
         usuario.setEmail(email);
-        usuario.setImage(imagem);
+       // usuario.setImage(imagem);
 
         usuarios.add(usuario);
 
@@ -67,22 +74,37 @@ public class MenuConsole {
     }
 
     private void cadastrarEvento() {
-        System.out.println("Título: ");
+        System.out.print("\nTítulo: ");
         String titulo = sc.nextLine();
-        System.out.println("Descrição: ");
+
+
+        System.out.print("\nDescrição: ");
         String descricao = sc.nextLine();
-        System.out.println("Data e hora início (yyyy-MM-ddTHH:mm): ");
+
+
+        System.out.print("\nData e hora início (yyyy-MM-ddTHH:mm): ");
         LocalDateTime horaInicio = LocalDateTime.parse(sc.nextLine());
-        System.out.println("Data e hora término (yyyy-MM-ddTHH:mm): ");
+
+
+        System.out.print("\nData e hora término (yyyy-MM-ddTHH:mm): ");
         LocalDateTime horaFim = LocalDateTime.parse(sc.nextLine());
-        System.out.println("Localizacao:");
+
+
+        System.out.print("\nLocalizacao:");
         String local = sc.nextLine();
-        System.out.println("Tipo de Evento: ");
+
+
+        System.out.print("\nTipo de Evento: ");
         String tipo = sc.nextLine();
-        System.out.println("Evento criado por:");
+
+
+        System.out.print("\nEvento criado por:");
         String usuario = sc.nextLine();
-        System.out.println("cor para destacar o evento: ");
+
+
+        System.out.print("\ncor para destacar o evento: ");
         String cor = sc.nextLine();
+
 
         Usuario usuarioResponsavel = usuarios.get(usuarios.indexOf(usuario));
 
@@ -106,7 +128,7 @@ public class MenuConsole {
             }else{
                 System.out.println("\n--- Usuários ---");
                 for( Usuario u: usuarios){
-                    System.out.println(", Nome: " + u.getNome());
+                    System.out.println("Nome: " + u.getNome());
                 }
             }
         }
