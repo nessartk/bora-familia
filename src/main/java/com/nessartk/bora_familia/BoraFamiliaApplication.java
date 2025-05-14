@@ -11,9 +11,7 @@ public class BoraFamiliaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BoraFamiliaApplication.class, args);
 
-		MenuConsole menuConsole = new MenuConsole();
 
-		menuConsole.iniciar();
 
 	}
 
