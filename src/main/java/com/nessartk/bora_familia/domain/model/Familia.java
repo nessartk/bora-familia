@@ -55,5 +55,25 @@ public class Familia {
     public void setMembros(List<Membro> membros) {
         this.membros = membros;
     }
+
+
+    public int getQuantidadeMembros(){
+        return membros.size();
+    }
+
+    public void adicionarMembro(){
+        membros.add((Membro) membros);// list
+    }
+
+    public void removerMembro(){
+        membros.remove((Membro) membros); // list
+    }
+
+    public String getInformacoesFamilia(){
+        return "Família"+ nome + "membros"+ membros.size() + "Data criação" + getDataCriacao();
+    }
+
+
+
 }
 
